@@ -4,7 +4,9 @@ The implementation traces cones through a 3D texture. The 3D texture represents 
 
 See following URL for a video demo: https://www.youtube.com/watch?v=cuCwyIBOapY&t=39s
 <p align="center">
+<a href="https://www.youtube.com/watch?v=cuCwyIBOapY&t=39s">
 <img src="https://github.com/Friduric/voxel-cone-tracing/blob/master/Assets/Screenshots/vct2s.png">
+</a>
 </p>
 Inspired by "Interactive Indirect Illumination Using Voxel Cone Tracing" by Crassin et al.
 
