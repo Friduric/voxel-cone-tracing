@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------------------------//
+//----------------------------------------------------------------------------------------------//
 // A voxel cone tracing implementation for real-time global illumination,                       //
 // refraction, specular, glossy and diffuse reflections, and soft shadows.                      //
 // The implementation traces cones through a 3D texture which contains a                        //
@@ -80,8 +80,8 @@ in vec3 normalFrag;
 
 out vec4 color;
 
-const vec3 normal = normalize(normalFrag); 
-const float MAX_DISTANCE = distance(vec3(abs(worldPositionFrag)), vec3(-1));
+vec3 normal = normalize(normalFrag); 
+float MAX_DISTANCE = distance(vec3(abs(worldPositionFrag)), vec3(-1));
 
 // Returns an attenuation factor given a distance.
 float attenuate(float dist){ dist *= DIST_FACTOR; return 1.0f / (CONSTANT + LINEAR * dist + QUADRATIC * dist * dist); }
@@ -97,7 +97,7 @@ vec3 orthogonal(vec3 u){
 vec3 scaleAndBias(const vec3 p) { return 0.5f * p + vec3(0.5f); }
 
 // Returns true if the point p is inside the unity cube. 
-bool isInsideCube(const vec3 p, float e = 0) { return abs(p.x) < 1 + e && abs(p.y) < 1 + e && abs(p.z) < 1 + e; }
+bool isInsideCube(const vec3 p, float e) { return abs(p.x) < 1 + e && abs(p.y) < 1 + e && abs(p.z) < 1 + e; }
 
 // Returns a soft shadow blend by using shadow cone tracing.
 // Uses 2 samples per step, so it's pretty expensive.
@@ -112,7 +112,7 @@ float traceShadowCone(vec3 from, vec3 direction, float targetDistance){
 
 	while(dist < STOP && acc < 1){	
 		vec3 c = from + dist * direction;
-		if(!isInsideCube(c)) break;
+		if(!isInsideCube(c, 0)) break;
 		c = scaleAndBias(c);
 		float l = pow(dist, 2); // Experimenting with inverse square falloff for shadows.
 		float s1 = 0.062 * textureLod(texture3D, c, 1 + 0.75 * l).a;
@@ -166,7 +166,7 @@ vec3 traceSpecularVoxelCone(vec3 from, vec3 direction){
 	// Trace.
 	while(dist < MAX_DISTANCE && acc.a < 1){ 
 		vec3 c = from + dist * direction;
-		if(!isInsideCube(c)) break;
+		if(!isInsideCube(c, 0)) break;
 		c = scaleAndBias(c); 
 		
 		float level = 0.1 * material.specularDiffusion * log2(1 + dist / VOXEL_SIZE);

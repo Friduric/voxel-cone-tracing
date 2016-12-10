@@ -140,7 +140,7 @@ void Graphics::initVoxelization()
 {
 	voxelizationMaterial = MaterialStore::getInstance().findMaterialWithName("voxelization");
 
-	assert(voxelMaterial != nullptr);
+	assert(voxelizationMaterial != nullptr);
 
 	const std::vector<GLfloat> texture3D(4 * voxelTextureSize * voxelTextureSize * voxelTextureSize, 0.0f);
 	voxelTexture = new Texture3D(texture3D, voxelTextureSize, voxelTextureSize, voxelTextureSize, true);
