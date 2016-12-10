@@ -49,11 +49,11 @@ vec3 calculatePointLight(const PointLight light){
 
 vec3 scaleAndBias(vec3 p) { return 0.5f * p + vec3(0.5f); }
 
-bool isInsideCube(const vec3 p, float e = 0) { return abs(p.x) < 1 + e && abs(p.y) < 1 + e && abs(p.z) < 1 + e; }
+bool isInsideCube(const vec3 p, float e) { return abs(p.x) < 1 + e && abs(p.y) < 1 + e && abs(p.z) < 1 + e; }
 
 void main(){
 	vec3 color = vec3(0.0f);
-	if(!isInsideCube(worldPositionFrag)) return;
+	if(!isInsideCube(worldPositionFrag, 0)) return;
 
 	// Calculate diffuse lighting fragment contribution.
 	const uint maxLights = min(numberOfLights, MAX_LIGHTS);

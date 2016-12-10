@@ -19,13 +19,13 @@ out vec4 color;
 vec3 scaleAndBias(vec3 p) { return 0.5f * p + vec3(0.5f); }
 
 // Returns true if p is inside the unity cube (+ e) centered on (0, 0, 0).
-bool isInsideCube(vec3 p, float e = 0.2f) { return abs(p.x) < 1 + e && abs(p.y) < 1 + e && abs(p.z) < 1 + e; }
+bool isInsideCube(vec3 p, float e) { return abs(p.x) < 1 + e && abs(p.y) < 1 + e && abs(p.z) < 1 + e; }
 
 void main() {
 	const float mipmapLevel = state;
 
 	// Initialize ray.
-	const vec3 origin = isInsideCube(cameraPosition) ? 
+	const vec3 origin = isInsideCube(cameraPosition, 0.2f) ? 
 		cameraPosition : texture(textureFront, textureCoordinateFrag).xyz;
 	vec3 direction = texture(textureBack, textureCoordinateFrag).xyz - origin;
 	const uint numberOfSteps = uint(INV_STEP_LENGTH * length(direction));
