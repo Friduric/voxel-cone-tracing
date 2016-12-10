@@ -18,12 +18,12 @@
 #include "Graphic\Renderer\MeshRenderer.h"
 #include "Time\Time.h"
 
-#define __LOG_INTERVAL 100 /* How often we should log frame rate info to the console. = 0 means don't log. */
+#define __LOG_INTERVAL 0 /* How often we should log frame rate info to the console. = 0 means don't log. */
 #if __LOG_INTERVAL > 0
 constexpr float __LOG_INTERVAL_TIME_GUARD = 1.0f;
 #endif
 
-using __DEFAULT_LEVEL = DragonScene; // The scene that will be loaded on startup.
+using __DEFAULT_LEVEL = GlassScene; // The scene that will be loaded on startup.
 // (see ScenePack.h for more scenes)
 
 Application & Application::getInstance() {
