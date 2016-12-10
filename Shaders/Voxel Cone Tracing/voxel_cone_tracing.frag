@@ -174,7 +174,7 @@ vec3 traceSpecularVoxelCone(vec3 from, vec3 direction){
 		float f = 1 - acc.a;
 		acc.rgb += 0.25 * (1 + material.specularDiffusion) * voxel.rgb * voxel.a * f;
 		acc.a += 0.25 * voxel.a * f;
-		dist += STEP * (0.25 + 0.625 * level);
+		dist += STEP * (1.0f + 0.125f * level);
 	}
 	return 1.0 * pow(material.specularDiffusion + 1, 0.8) * acc.rgb;
 }
@@ -286,7 +286,7 @@ vec3 calculateDirectLight(const PointLight light, const vec3 viewDirection){
 	// --------------------
 	float shadowBlend = 1;
 #if (SHADOWS == 1)
-	if(diffuseAngle > 0 && settings.shadows)
+	if(diffuseAngle * (1.0f - material.transparency) > 0 && settings.shadows)
 		shadowBlend = traceShadowCone(worldPositionFrag, lightDirection, distanceToLight);
 #endif
 
@@ -297,7 +297,7 @@ vec3 calculateDirectLight(const PointLight light, const vec3 viewDirection){
 	specularAngle = min(shadowBlend, max(specularAngle, refractiveAngle));
 	const float df = 1.0f / (1.0f + 0.25f * material.specularDiffusion); // Diffusion factor.
 	const float specular = SPECULAR_FACTOR * pow(specularAngle, df * SPECULAR_POWER);
-	const float diffuse = diffuseAngle;
+	const float diffuse = diffuseAngle * (1.0f - material.transparency);
 
 	const vec3 diff = material.diffuseReflectivity * material.diffuseColor * diffuse;
 	const vec3 spec = material.specularReflectivity * material.specularColor * specular;
