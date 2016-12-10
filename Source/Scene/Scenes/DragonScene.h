@@ -2,11 +2,12 @@
 
 #include <vector>
 
+#include "../Scene.h"
 #include "../Templates/FirstPersonScene.h"
 
 class Shape;
 
-/// <summary> A scene with a dragon and a lamp in the ceiling. </summary>
+/// <summary> A scene with a specular dragon and a ceiling lamp. </summary>
 class DragonScene : public FirstPersonScene {
 public:
 	void update() override;

@@ -58,7 +58,7 @@ void MultipleObjectsScene::init(unsigned int viewportWidth, unsigned int viewpor
 	objectMaterialSetting->specularReflectivity = 1.0f;
 	objectMaterialSetting->diffuseReflectivity = 0.0f;
 	objectMaterialSetting->specularDiffusion = 3.2f;
-	objectMaterialSetting->transparency = 0.9f;
+	objectMaterialSetting->transparency = 1.0f;
 	objectRenderer->tweakable = true;
 	objectRenderer->transform.scale = glm::vec3(0.23f);
 	objectRenderer->transform.rotation = glm::vec3(0.00, 0.30, 0.00);

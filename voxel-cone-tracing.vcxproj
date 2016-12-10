@@ -106,7 +106,7 @@
       <AdditionalOptions>/NODEFAULTLIB:libcmt.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
-        <Command>copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)lib\$(ProjectName).dll"</Command>
+      <Command>copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)lib\$(ProjectName).dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -187,7 +187,6 @@
     <ClInclude Include="Source\Scene\Scene.h" />
     <ClInclude Include="Source\Scene\ScenePack.h" />
     <ClInclude Include="Source\Scene\Scenes\GlassScene.h" />
-    <ClInclude Include="Source\Scene\Scenes\TransparencyScene.h" />
     <ClInclude Include="Source\Scene\Scenes\CornellScene.h" />
     <ClInclude Include="Source\Scene\Scenes\DragonScene.h" />
     <ClInclude Include="Source\Scene\Scenes\MultipleObjectsScene.h" />
@@ -217,7 +216,6 @@
     <ClCompile Include="Source\Graphic\Texture2D.cpp" />
     <ClCompile Include="Source\Graphic\Texture3D.cpp" />
     <ClCompile Include="Source\Scene\Scenes\GlassScene.cpp" />
-    <ClCompile Include="Source\Scene\Scenes\TransparencyScene.cpp" />
     <ClCompile Include="Source\Scene\Scenes\CornellScene.cpp" />
     <ClCompile Include="Source\Scene\Scenes\DragonScene.cpp" />
     <ClCompile Include="Source\Scene\Scenes\MultipleObjectsScene.cpp" />

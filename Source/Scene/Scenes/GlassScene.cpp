@@ -52,8 +52,10 @@ void GlassScene::init(unsigned int viewportWidth, unsigned int viewportHeight) {
 	renderers[6]->materialSetting = MaterialSetting::White(); // Right box.
 	renderers[6]->enabled = false;
 
+
+	// Buddha.
 	int buddhaIndex = renderers.size();
-	Shape * buddha = ObjLoader::loadObjFile("Assets\\Models\\dragon.obj");
+	Shape * buddha = ObjLoader::loadObjFile("Assets\\Models\\buddha.obj");
 	shapes.push_back(buddha);
 	for (unsigned int i = 0; i < buddha->meshes.size(); ++i) {
 		renderers.push_back(new MeshRenderer(&(buddha->meshes[i])));
@@ -85,6 +87,7 @@ void GlassScene::init(unsigned int viewportWidth, unsigned int viewportHeight) {
 	renderers[lightCubeIndex]->materialSetting->specularReflectivity = 0.0f;
 	renderers[lightCubeIndex]->materialSetting->diffuseReflectivity = 0.0f;
 
+	// An additional wall (behind the camera).
 	int backWallIndex = renderers.size();
 	Shape * backWall = ObjLoader::loadObjFile("Assets\\Models\\quadn.obj");
 	shapes.push_back(backWall);
