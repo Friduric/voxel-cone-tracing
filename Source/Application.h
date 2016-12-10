@@ -14,7 +14,7 @@ struct GLFWwindow;
 class Application {
 public:
 	enum InputState { FREE_LOOK = 0, TWEAK_BAR = 1 };
-	const unsigned int MSAA_SAMPLES = 4;
+	const unsigned int MSAA_SAMPLES = 0;
 	const unsigned int DEFAULT_WINDOW_WIDTH = 1280;
 	const unsigned int DEFAULT_WINDOW_HEIGHT = 720;
 	const char * DEFAULT_TITLE = "Voxel Cone Tracing by Fredrik Prantare <prantare@gmail.com>";
