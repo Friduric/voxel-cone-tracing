@@ -16,4 +16,6 @@ https://research.nvidia.com/sites/default/files/publications/GIVoxels-pg2011-aut
 
 Course project in TSBK03 (Advanced Game Programming) at Linköping University by Fredrik Präntare.
 
+This demo requires OpenGL 4.4 to run.
+
 Feel free to use, modify and share. Sharing is caring!
