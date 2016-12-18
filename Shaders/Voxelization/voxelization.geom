@@ -17,7 +17,7 @@ out vec3 normalFrag;
 void main(){
 	const vec3 p1 = worldPositionGeom[1] - worldPositionGeom[0];
 	const vec3 p2 = worldPositionGeom[2] - worldPositionGeom[0];
-	const vec3 p = abs(normalize(cross(p1, p2))); 
+	const vec3 p = abs(cross(p1, p2)); 
 	for(uint i = 0; i < 3; ++i){
 		worldPositionFrag = worldPositionGeom[i];
 		normalFrag = normalGeom[i];
