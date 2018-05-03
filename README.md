@@ -19,4 +19,7 @@ https://prantare.files.wordpress.com/2016/12/frepr183_voxel_cone_tracing.pdf
 
 This demo requires OpenGL 4.4 to run.
 
+Rafael Sabino has adapted this project to run on Mac OS X. For more information, see:
+https://github.com/phonowiz/voxel-cone-tracing.
+
 Feel free to use, modify and share. Sharing is caring!
