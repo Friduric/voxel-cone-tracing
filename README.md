@@ -13,10 +13,6 @@ Inspired by "Interactive Indirect Illumination Using Voxel Cone Tracing" by Cras
 (Cyril Crassin, Fabrice Neyret, Miguel Saintz, Simon Green and Elmar Eisemann)
 https://research.nvidia.com/sites/default/files/publications/GIVoxels-pg2011-authors.pdf
 
-
-Course project in TSBK03 (Advanced Game Programming) at Linköping University by Fredrik Präntare. See the report here:
-https://prantare.files.wordpress.com/2016/12/frepr183_voxel_cone_tracing.pdf
-
 This demo requires OpenGL 4.4 to run.
 
 Rafael Sabino has adapted this project to run on Mac OS X. For more information, see:
