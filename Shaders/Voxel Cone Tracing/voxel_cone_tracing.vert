@@ -1,4 +1,4 @@
-// Author:	Fredrik Pr‰ntare <prantare@gmail.com>
+// Author:	Fredrik Pr√§ntare
 // Date:	11/26/2016
 #version 450 core
 
