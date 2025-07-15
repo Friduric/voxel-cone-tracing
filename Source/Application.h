@@ -17,7 +17,7 @@ public:
 	const unsigned int MSAA_SAMPLES = 0;
 	const unsigned int DEFAULT_WINDOW_WIDTH = 1280;
 	const unsigned int DEFAULT_WINDOW_HEIGHT = 720;
-	const char * DEFAULT_TITLE = "Voxel Cone Tracing by Fredrik Prantare <prantare@gmail.com>";
+	const char * DEFAULT_TITLE = "Voxel Cone Tracing by Fredrik Prantare";
 	const unsigned int DEFAULT_FULLSCREEN = 0; // 0 is window, 1 is fullscreen, 2 is borderless fullscreen.
 	const int DEFAULT_VSYNC = 0; // 0 is no vSync, can also use negative vSync (check GLFW docs).
 
