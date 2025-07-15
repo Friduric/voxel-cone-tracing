@@ -8,7 +8,7 @@
 // (Cyril Crassin, Fabrice Neyret, Miguel Saintz, Simon Green and Elmar Eisemann)               //
 // https://research.nvidia.com/sites/default/files/publications/GIVoxels-pg2011-authors.pdf     //
 //                                                                                              //  
-// Author:  Fredrik Präntare <prantare@gmail.com>                                               //
+// Author:  Fredrik Präntare                                               //
 // Date:    11/26/2016                                                                          //
 //                                                                                              // 
 // Course project in TSBK03 (Techniques for Advanced Game Programming) at Linköping University. //
