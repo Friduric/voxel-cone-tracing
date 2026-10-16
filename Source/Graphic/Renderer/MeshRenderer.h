@@ -8,6 +8,7 @@
 #include <glfw3.h>
 #include <gtc/type_ptr.hpp>
 #include <glm.hpp>
+#include <string>
 
 class Mesh;
 

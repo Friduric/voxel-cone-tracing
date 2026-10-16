@@ -6,6 +6,7 @@
 #include <glew.h>
 #include <glfw3.h>
 #include <SOIL\SOIL.h>
+#include <string>
 
 /// <summary> A 3D texture wrapper class. Handles important OpenGL calls. </summary>
 class Texture3D {

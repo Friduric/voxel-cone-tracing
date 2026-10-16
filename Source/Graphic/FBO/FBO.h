@@ -2,7 +2,7 @@
 
 #define GLEW_STATIC
 #include <glew.h>
-
+#include <string>
 #include <vector>
 
 // https://www.opengl.org/wiki/Framebuffer_Object_Examples

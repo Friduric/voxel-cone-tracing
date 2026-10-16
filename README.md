@@ -1,3 +1,5 @@
+NOTE: None of this code is mine. This fork is a simple fix for the original project: https://github.com/Friduric/voxel-cone-tracing
+
 A voxel cone tracing implementation for real-time global illumination. 
 Voxel cone tracing is used to create effects such as transparency (by refraction), reflections (diffuse and specular) and soft shadows.
 The implementation traces cones through a 3D texture. The 3D texture represents a directly lit voxelized scene.
