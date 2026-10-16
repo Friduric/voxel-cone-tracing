@@ -7,6 +7,7 @@
 #include <gtx/transform.hpp>
 #include <mat4x4.hpp>
 #include <gtc/quaternion.hpp>
+#include <iostream>
 
 /// <summary> Represents a transform: rotation, position and scale. </summary>
 class Transform {
